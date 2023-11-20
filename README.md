@@ -39,7 +39,8 @@ Utilize generative AI to assist in generating compliance reports and ensuring th
 Below is an attached Report Analysis 
 
 
-<img width="507" alt="image" src="https://github.com/Shaili773/Retirement-Planning_222/assets/71250299/bae51cb0-3bc0-44f8-9bf8-87d72ef71866">
+<img width="620" alt="image" src="https://github.com/Shaili773/Retirement-Planning_222/assets/71250299/2f31bf37-a971-44a2-a066-dbb642eebb0d">
+
 
 
 
