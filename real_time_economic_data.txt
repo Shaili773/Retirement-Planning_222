@@ -1,0 +1,45 @@
+import openai
+from alpha_vantage.timeseries import TimeSeries
+import matplotlib.pyplot as plt
+
+# Set your OpenAI GPT-3 API key
+openai.api_key = 'YOUR_OPENAI_API_KEY'
+
+# Replace 'YOUR_ALPHA_VANTAGE_API_KEY' with your actual Alpha Vantage API key
+alpha_vantage_api_key = 'YOUR_ALPHA_VANTAGE_API_KEY'
+
+def generate_retirement_response(prompt):
+    # Generate response using GPT-3
+    response = openai.Completion.create(
+        engine="text-davinci-003",
+        prompt=prompt,
+        max_tokens=150
+    )
+
+    return response.choices[0].text.strip()
+
+def get_real_time_stock_data(symbol, interval='1min'):
+    # Initialize the Alpha Vantage TimeSeries object
+    ts = TimeSeries(key=alpha_vantage_api_key, output_format='pandas')
+
+    # Get real-time intraday data
+    data, meta_data = ts.get_intraday(symbol=symbol, interval=interval, outputsize='compact')
+
+    # Print the last few rows of the data
+    print(data.tail())
+
+    # Plot the closing prices
+    data['4. close'].plot()
+    plt.title(f'Intraday Time Series for {symbol}')
+    plt.show()
+
+# Example prompt for retirement planning
+user_prompt = "What are some key considerations for retirement planning?"
+
+# Generate retirement planning response
+generated_response = generate_retirement_response(user_prompt)
+print("Generated Response (Retirement Planning):", generated_response)
+
+# Example for real-time economic data (AAPL stock)
+stock_symbol = 'AAPL'
+get_real_time_stock_data(stock_symbol)
