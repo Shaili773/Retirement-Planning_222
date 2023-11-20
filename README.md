@@ -8,6 +8,7 @@ Use generative AI to create educational materials, articles, and guides to help 
 
 __Automated Financial Planning Documents:__
 
+
 Generate personalized retirement plans and financial documents based on client-specific information using natural language generation. This can streamline the planning process and provide clients with easy-to-understand documents.
 __Interactive Virtual Assistants:__
 
