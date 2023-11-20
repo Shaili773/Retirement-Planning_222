@@ -1,6 +1,7 @@
 # Retirement-Planning_222
 
 Using Generative AI for our project in Retirement Planning
+
 __Content Generation for Education:__
 
 Use generative AI to create educational materials, articles, and guides to help clients understand complex retirement planning concepts, investment strategies, and market trends
